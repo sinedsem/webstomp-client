@@ -8,6 +8,9 @@ export function over(socketType: any, options?: Options): Client;
 
 export class Client {
 
+  heartbeat: any;
+  connected: boolean;
+
   connect(headers: ConnectionHeaders, connectCallback: (frame?: Frame) => any, errorCallback?: (error: string) => any): void;
   connect(login: string, passcode: string, connectCallback: (frame?: Frame) => any, errorCallback?: (error: string) => any, host?: string): void;
 
