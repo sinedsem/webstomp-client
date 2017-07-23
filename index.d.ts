@@ -31,6 +31,8 @@ export class Client {
   ack(messageID: string, subscription: Subscription, headers?: AckHeaders): void;
 
   nack(messageID: string, subscription: Subscription, headers?: NackHeaders): void;
+
+  debug: any;
 }
 
 export class Frame {
